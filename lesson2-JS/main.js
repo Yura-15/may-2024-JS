@@ -128,16 +128,16 @@ if (a != 0) {
 
 let time = 20;
 
-if (time >= 0 && time <= 15)
+if (time >= 0 && time <= 14)
 {
     console.log("Перша четверть");
-}else if (time >= 16 && time <= 30)
+}else if (time >= 15 && time <= 29)
 {
     console.log("Друга четверть");
-}else if (time >= 31 && time <= 45)
+}else if (time >= 30 && time <= 44)
 {
     console.log("Третя четверть");
-}else if (time >= 46 && time <= 59)
+}else if (time >= 45 && time <= 59)
 {
     console.log("Четверта четверть")}
 //
