@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<script>
+
+function square(a,b){
+    let S = a * b
+    return S;
+}
+let result = square(15,30);
+console.log(result);
+//
+function circle(r){
+    let  s = Math.PI * r * r
+    return s;
+}
+let results = circle(5)
+console.log(results)
+//
+function cilinder (r, h) {
+
+return 2 * Math.PI * r * r;
+}
+
+console.log(cilinder(5,5));
+//
+    let arr1 = [123];
+    let arr2 = [456];
+    let arr3 = [789];
+    let arr4 = [195];
+
+   function array(arr){
+       for (const arrElement of arr){
+           console.log(arrElement)
+       }
+}
+array(arr1);
+array(arr2);
+array(arr3);
+array(arr4);
+//
+function print(tag){
+    document.write(`${tag}></${tag}>`)
+}
+print('створити функцію яка створює параграф ', 'p')
+//
+function printer (text){
+    document.write(`
+<ul>
+<li>${text}</li>
+<li>${text}</li>
+<li>${text}</li>
+</ul>`)
+}
+printer('aloha')
+//
+function list(arr){
+    document.write(`<ul>`)
+    for (const arrElement of arr) {
+        document.write(`<li>${arrElement}</li>`)
+        document.write(`</ul>`)
+    }
+}
+list([1, 'hello', true, 42, 'world', false]);
+//
+function liste(users) {
+    for (const user of users) {
+        document.write(`<h1>${user.id} ${user.name} ${user.age}</h1>`)
+    }
+}
+liste([
+    {id:2,name:'Yura',age:12},
+    {id:3,name:'Igor',age:12},
+    {id:4,name:'Oleg',age:12}
+])
+//
+function num(arr) {
+    let minimum = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < minimum) {
+            minimum = arr[i];
+        }
+    }
+    return minimum;
+}
+console.log(num([56,44,65,123,78]))
+//
+function sum(arr) {
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+        total += arr[i];
+    }
+    return total;
+}
+console.log(sum([50, 30, 100]));
+
+
+
+
+
+
+</script>
+</body>
+</html>
