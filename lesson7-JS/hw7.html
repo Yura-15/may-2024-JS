@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+
+<script>
+    function User(id, name, surname, email, phone) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.phone = phone;
+    }
+    let users = [
+        new User(1, 'Yura', 'Asd', 'yura@gmail.com', '+380962785272'),
+        new User(2, 'Igor', 'Qwe', 'igor@gmail.com', '+380961578329'),
+        new User(3, 'Vasya', 'Zxc', 'vasya@gmail.com', '+380961327458'),
+        new User(4, 'Oleg', 'Rty', 'oleg@gmail.com', '+380217894563'),
+        new User(5, 'Dima', 'Edc', 'dima@gmail.com', '+380964567891'),
+        new User(6, 'Petro', 'Wdc', 'petro@gmail.com', '+380961239674'),
+        new User(7, 'Vitalik', 'Qsx', 'vitalik@gmail.com', '+380961237894'),
+        new User(8, 'Kolya', 'Nht', 'kolya@gmail.com', '+380967894562'),
+        new User(9, 'Bodya', 'Uio', 'bodya@gmail.com', '+380963214569'),
+        new User(10, 'Taras', 'Lit', 'taras@gmail.com', '+380962587412'),
+    ];
+    console.log(users)
+//
+    const filterUsers = users.filter(user => user.id % 2 === 0);
+    console.log(filterUsers)
+//
+    const sortUsers = users.sort((a, b) => a.id - b.id);
+    console.log(sortUsers);
+//
+    class Client{
+        constructor(id,name,surname,email,phone,order) {
+            this.id=id
+            this.name= id
+            this.surname= surname
+            this.email= email
+            this.phone= surname
+            this.order= order
+        }
+    }
+    let Clients = [
+        new Client(1, 'Yura', 'Asd', 'yura@gmail.com', '+380962785272',[{title:'Phone',price:20000},{title:'tv',price:100000}]),
+        new Client(2, 'Igor', 'Qwe', 'igor@gmail.com', '+380961578329',[{title:'TV',price:35000}]),
+        new Client(3, 'Vasya', 'Zxc', 'vasya@gmail.com', '+380961327458',[{title:'IPhone',price:40000}]),
+        new Client(4, 'Oleg', 'Rty', 'oleg@gmail.com', '+380217894563',[{title:'Samsung',price:55000},{title:'AMD',price:22000}]),
+        new Client(5, 'Dima', 'Edc', 'dima@gmail.com', '+380964567891',[{title:'Xiaomi',price:18000},{title:'JBL',price:150000}]),
+        new Client(6, 'Petro', 'Wdc', 'petro@gmail.com', '+380961239674',[{title:'Poco',price:15000}]),
+        new Client(7, 'Vitalik', 'Qsx', 'vitalik@gmail.com', '+380961237894',[{title:'Huawei',price:16000}]),
+        new Client(8, 'Kolya', 'Nht', 'kolya@gmail.com', '+380967894562',[{title:'Google',price:13000},{title:'HyperX',price:5000}]),
+        new Client(9, 'Bodya', 'Uio', 'bodya@gmail.com', '+380963214569',[{title:'Nokia',price:12000}]),
+        new Client(10, 'Taras', 'Lit', 'taras@gmail.com', '+380962587412',[{title:'BlackBerry',price:60000},{title:'NVIDIA',price:35000}]),
+    ]
+    console.log(Clients)
+//
+    const sortClients = Clients.sort((a, b) => a.order.length - b.order.length);
+    console.log(sortClients)
+//
+    function Car(model, manufacturer, year, maxSpeed, engineVolume) {
+        this.model = model;
+        this.manufacturer = manufacturer;
+        this.year = year;
+        this.maxSpeed = maxSpeed;
+        this.engineVolume = engineVolume;
+        this.drive = () => {
+            console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
+        }
+        this.increaseMaxSpeed = function (newSpeed){
+            this.maxSpeed= this.maxSpeed + newSpeed;
+        };
+
+        this.changeYear = function (year) {
+            if (year>2015) this.year = year;
+        }
+        this.addDriver = function (driver)  {
+            if (driver) this.driver = driver;
+        }
+    }
+    const myCar = new Car('BMW', 'CS', 2021, 320, 4.4);
+    console.log(myCar);
+
+    myCar.drive();
+    myCar.increaseMaxSpeed(250)
+    myCar.addDriver({name:'Yura'})
+    console.log(myCar);
+//
+    class newCar {
+        constructor(model, manufacturer, year, maxSpeed, engineVolume) {
+            this.model = model;
+            this.manufacturer = manufacturer;
+            this.year = year;
+            this.maxSpeed = maxSpeed;
+            this.engineVolume = engineVolume;
+        }
+
+        increaseMaxSpeed = function (newSpeed){
+            this.maxSpeed= this.maxSpeed + newSpeed;
+        };
+        changeYear = function (year) {
+            if (year>2015) this.year = year;
+        }
+       addDriver = function(driver)  {
+            if (driver) this.driver = driver;
+        }
+
+    }
+
+    myCar.drive();
+    myCar.increaseMaxSpeed(300)
+    myCar.addDriver({name:'Dima'})
+    console.log(myCar);
+//
+    class Cinderella {
+        constructor(name, age, footSize) {
+            this.name = name;
+            this.age = age;
+            this.footSize = footSize;
+        }
+    }
+    const cinderellas = [
+        new Cinderella('Anna', 15, 42),
+        new Cinderella('Yulia', 22, 39),
+        new Cinderella('Vika', 19, 42),
+        new Cinderella('Sofia', 25, 41),
+        new Cinderella('Alina', 28, 37),
+        new Cinderella('Marta', 20, 31),
+        new Cinderella('Maria', 12, 39),
+        new Cinderella('Karina', 45, 38),
+        new Cinderella('Anny', 32, 32),
+        new Cinderella('Ira', 31, 39)
+    ];
+    class Prince {
+        constructor(name, age, size) {
+            this.name = name;
+            this.age = age;
+            this.size = size;
+        }
+    }
+    const foundCinderella = cinderellas.find(cinderella => cinderella.footSize === Prince.size);
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

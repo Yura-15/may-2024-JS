@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+<script>
+    const square = (a,b) => S = a * b;
+    console.log(square(15,30));
+//
+    const circle = (r) =>s = Math.PI * r * r;
+    console.log(circle(12))
+//
+    const cilinder = (r, h) =>  2 * Math.PI * r * r;
+    console.log(cilinder(5,10));
+//
+    const array = (arr) =>{arr.forEach(array => console.log(array));
+    }
+    let number = [19, 27, 34, 45, 65]
+    array(number);
+//
+    const createParagraph = (text) => {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = text;
+        document.write('Довільний текст');}
+    createParagraph();
+//
+//
+    let printer = (text) =>{
+        document.write(`
+<ul>
+<li>${text}</li>
+<li>${text}</li>
+<li>${text}</li>
+</ul>`)
+    }
+printer('hello')
+//
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
